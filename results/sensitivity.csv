@@ -1,0 +1,5 @@
+case,intact_grid_shed_mw,expected_lost_mw_top_40_events
+load 55 GW,0.00,12.45
+load 70 GW,122.54,19.62
+load 80 GW,289.54,25.37
+flow limits x 0.7,402.37,21.59

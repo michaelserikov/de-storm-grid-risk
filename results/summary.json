@@ -1,0 +1,19 @@
+{
+  "buses": 780,
+  "branches": 1172,
+  "lines": 1019,
+  "overhead_km": 25029.62709,
+  "available_generation_gw": 142.3091498494,
+  "intact_grid_shed_mw": 122.54077666666853,
+  "largest_storm": {
+    "start": "2007-01-17",
+    "end": "2007-01-19",
+    "peak_day": "2007-01-18",
+    "days": 3,
+    "loss_index": 0.154994,
+    "stations_above_v98": 149,
+    "max_gust": 55.4,
+    "season": 2007,
+    "storm": "Kyrill"
+  }
+}

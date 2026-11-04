@@ -1,0 +1,26 @@
+lost_mw_per_winter_at_2,lost_mw_per_winter_at_5,lost_mw_per_winter_at_15,action,km
+7.679,22.042,70.832,none,0.000
+6.799,19.158,66.487,"top 1, ranked at 2 failures",36.047
+5.565,16.430,59.478,"top 2, ranked at 2 failures",72.212
+5.314,14.421,56.005,"top 3, ranked at 2 failures",122.165
+4.223,11.353,49.017,"top 5, ranked at 2 failures",312.979
+3.600,10.148,35.571,"top 8, ranked at 2 failures",556.440
+3.183,9.736,33.339,"top 12, ranked at 2 failures",698.945
+2.030,7.033,26.573,"top 20, ranked at 2 failures",1182.151
+1.076,3.364,14.443,"top 30, ranked at 2 failures",1390.705
+6.444,19.402,64.067,"top 1, ranked at 5 failures",36.165
+5.933,17.868,60.138,"top 2, ranked at 5 failures",62.349
+5.821,17.192,54.747,"top 3, ranked at 5 failures",174.900
+4.823,13.832,41.371,"top 5, ranked at 5 failures",332.169
+3.733,11.016,36.630,"top 8, ranked at 5 failures",602.373
+2.786,9.624,32.162,"top 12, ranked at 5 failures",800.699
+1.749,4.658,20.045,"top 20, ranked at 5 failures",1117.815
+1.169,3.842,15.135,"top 30, ranked at 5 failures",1519.666
+7.428,20.033,67.359,"top 1, ranked at 15 failures",49.953
+6.193,17.393,60.594,"top 2, ranked at 15 failures",86.118
+6.193,16.713,59.097,"top 3, ranked at 15 failures",117.009
+4.991,13.221,49.549,"top 5, ranked at 15 failures",300.267
+3.994,9.861,35.685,"top 8, ranked at 15 failures",535.810
+3.482,8.230,31.327,"top 12, ranked at 15 failures",844.625
+2.576,5.546,21.589,"top 20, ranked at 15 failures",1321.838
+1.820,4.527,16.767,"top 30, ranked at 15 failures",1782.910

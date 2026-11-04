@@ -1,0 +1,4 @@
+expected_failures_largest_storm,fragility_median,events_with_failures,lps_solved,failed_lines_per_winter,lost_load_largest_storm_mw,p_any_loss_largest_storm,max_sampled_lost_load_mw,expected_lost_mw_per_winter,kendall_event_loss_index_vs_lost_load
+2.0000,3.0113,108,1768,0.7830,23.7509,0.2400,1860.6201,6.4824,0.3686
+5.0000,2.8242,161,3229,1.9392,52.0738,0.3750,1972.0379,19.3776,0.4485
+15.0000,2.5920,275,6985,6.0235,187.7447,0.5100,2768.8605,70.5285,0.5985

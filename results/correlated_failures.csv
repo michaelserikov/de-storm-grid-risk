@@ -1,0 +1,4 @@
+correlation_length_km,expected_lost_mw_per_winter,events_per_winter_above_500_mw,events_per_winter_above_1000_mw,max_sampled_lost_mw,lps
+0.0000,20.3457,0.0066,0.0023,1860.6201,1848
+50.0000,32.6854,0.0177,0.0086,3823.0617,1182
+200.0000,50.0750,0.0340,0.0180,4015.0814,772

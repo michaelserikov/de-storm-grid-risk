@@ -1,0 +1,34 @@
+{
+  "0km": {
+    "correlation_length_km": 0.0,
+    "prior": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "hours": 24.0,
+    "voll_eur_per_mwh": 10000.0,
+    "peak_cost_keur_per_km_year": 3.98,
+    "peak_evpi_meur_per_year": 1.066861825063199,
+    "peak_evpi_share_of_cost": 0.1872813169617458,
+    "peak_evpi_boot_p05": 0.03400237747571464,
+    "peak_evpi_boot_p95": 1.4330683575183683,
+    "expected_cost_no_action_meur": 7.3557382966191724
+  },
+  "50km": {
+    "correlation_length_km": 50.0,
+    "prior": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "hours": 24.0,
+    "voll_eur_per_mwh": 10000.0,
+    "peak_cost_keur_per_km_year": 5.01,
+    "peak_evpi_meur_per_year": 1.3192816412442663,
+    "peak_evpi_share_of_cost": 0.12009109464455757,
+    "peak_evpi_boot_p05": 0.05012808019321466,
+    "peak_evpi_boot_p95": 1.4837591161674546,
+    "expected_cost_no_action_meur": 11.987909945734668
+  }
+}

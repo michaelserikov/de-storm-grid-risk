@@ -1,0 +1,20 @@
+[project]
+name = "stormgrid"
+version = "0.1.0"
+description = "Windstorms on the German transmission grid: fragility, Monte Carlo line failures, DC power flow and lost load from open data"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2", "numpy>=2.0", "scipy>=1.13"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

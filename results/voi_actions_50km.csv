@@ -1,0 +1,18 @@
+lost_mw_per_winter_at_2,lost_mw_per_winter_at_5,lost_mw_per_winter_at_15,action,km
+15.361,37.163,110.111,none,0.000
+13.278,32.621,103.353,"top 1, ranked at 2 failures",78.274
+13.236,32.621,103.226,"top 2, ranked at 2 failures",148.981
+12.375,30.876,98.727,"top 3, ranked at 2 failures",185.147
+10.005,27.135,89.825,"top 5, ranked at 2 failures",410.237
+8.247,22.010,72.158,"top 8, ranked at 2 failures",702.635
+7.825,20.792,68.620,"top 12, ranked at 2 failures",941.758
+6.274,17.652,58.538,"top 20, ranked at 2 failures",1121.995
+5.802,15.974,50.075,"top 30, ranked at 2 failures",1418.833
+6.599,16.740,51.209,"top 20, ranked at 5 failures",1290.675
+6.307,15.435,46.385,"top 30, ranked at 5 failures",1909.210
+13.284,32.621,103.370,"top 1, ranked at 15 failures",70.708
+11.629,30.104,96.508,"top 3, ranked at 15 failures",261.521
+10.614,28.311,89.623,"top 5, ranked at 15 failures",424.025
+8.186,20.297,66.278,"top 12, ranked at 15 failures",971.350
+6.945,17.693,52.935,"top 20, ranked at 15 failures",1476.531
+6.485,16.492,45.988,"top 30, ranked at 15 failures",1965.867
