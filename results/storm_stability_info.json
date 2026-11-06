@@ -1,0 +1,10 @@
+{
+  "storms": 10,
+  "train_samples": 200,
+  "test_samples": 200,
+  "random_draws": 3,
+  "fragility_case": 5.0,
+  "selection": "worst storms by mean lost load on the training sample",
+  "lines_overhead": 993,
+  "seconds": 56978
+}

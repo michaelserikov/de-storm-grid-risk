@@ -1,0 +1,5 @@
+k,mean_pairwise_jaccard,median_pairwise_jaccard,share_of_pairs_with_no_overlap
+5,0.039,0.000,0.733
+10,0.048,0.000,0.600
+20,0.054,0.026,0.289
+30,0.055,0.034,0.156

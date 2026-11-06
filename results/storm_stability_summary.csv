@@ -1,0 +1,5 @@
+k,lost_no_action_mw,lost_own_ranking_mw,lost_others_ranking_mw,lost_random_mw,reduction_own_ranking,reduction_others_ranking,reduction_random
+5,586.245,310.496,479.781,585.184,0.470,0.182,0.002
+10,586.245,206.172,434.079,571.863,0.648,0.260,0.025
+20,586.245,101.182,249.410,531.636,0.827,0.575,0.093
+30,586.245,78.720,116.425,580.023,0.866,0.801,0.011
