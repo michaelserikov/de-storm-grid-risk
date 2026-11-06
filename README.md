@@ -11,6 +11,7 @@ This is an illustrative single-country study. **No public failure data exist for
 - **The meshed grid absorbs most failures.** Even when 5 lines are expected to fail in Kyrill, 63% of the samples lose no load. Lost load is a rare and heavy-tailed event: 100 MW about once in 21 winters, 1,000 MW about once in 370.
 - **Correlated failures change the tail more than the assumed fragility of any one line suggests.** With unchanged failure probabilities per line, a correlation length of 50 km raises expected lost load from 20 to 33 MW per winter and events above 1,000 MW from about 1 in 440 to 1 in 120 winters; 200 km gives 50 MW and 1 in 56. Parallel circuits and neighbouring corridors failing together is what breaks the N-1 logic.
 - **Reinforcement decisions concentrate on few branches.** The five most critical branches carry 20% of the lost load attributed to failed branches and the top 30 carry 54%, out of 1,019 lines.
+- **The critical lines differ from storm to storm, but a larger plan transfers.** Among the ten storms with the most lost load, 73% of the pairs share none of their five most critical branches. On an independent test sample, making a storm's own top 30 branches immune removes 87% of its lost load and the top 30 ranked on all other events 80%, against 1% for 30 random overhead lines; with only 5 branches the figures are 47% and 18%. A small plan is a bet on the next storm's footprint, a plan of 20 to 30 branches is not (`scripts/storm_stability.py`, `results/storm_stability_*.csv`).
 - **Fragility is worth knowing only in a window of reinforcement costs.** Below about 2.5 thousand EUR per km and year a large program (over 1,000 km) is chosen, and above about 40 (independent failures) or 20 (correlated) nothing is reinforced whatever the fragility is. In between, the expected value of perfect information peaks at about 1.1 MEUR per year (19% of the expected cost, independent failures) and 1.3 MEUR per year (12%, correlated). Resampling winters puts a wide 90% range around the peak: 0.03 to 1.4 and 0.05 to 1.5 MEUR.
 - **Imperfect information loses value quickly.** At the peak with independent failures, a signal that names the right fragility case 80% of the time is worth about half of perfect information (54%), and one that is right 60% of the time about a fifth (19%).
 
@@ -63,6 +64,7 @@ pip install -e ".[test]"
 python scripts/download_data.py   # network and plants into data/raw/, not committed
 python -m stormgrid.run           # about 15 minutes: results/summary_by_fragility.csv, top_events.csv, exceedance.csv
 python -m stormgrid.value         # about 30 minutes: correlated failures and value of information
+python scripts/storm_stability.py # many hours: stability of critical lines across storms; resumes from a cache in data/raw/
 pytest                            # offline tests on small grids with answers known by hand
 ```
 
