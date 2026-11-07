@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
-from scipy.optimize import linprog
+from . import lp
 
 
 class ShedModel:
@@ -37,9 +37,7 @@ class ShedModel:
         limit = self.limit[keep]
         bounds = [(None, None)] * n + [(0.0, g) for g in self.gen] + [(0.0, d) for d in self.load]
         # A flow in MW is scale * b * angle difference, so the angle variable absorbs the scale
-        r = linprog(self.cost, A_ub=A_ub, b_ub=np.r_[limit, limit], A_eq=A_eq, b_eq=-self.load, bounds=bounds, method="highs")
-        if not r.success:
-            raise RuntimeError(r.message)
+        r = lp.solve(self.cost, A_ub, np.r_[limit, limit], A_eq, -self.load, bounds)
         return r.x[2 * n:]
 
 

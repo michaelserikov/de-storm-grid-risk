@@ -1,0 +1,22 @@
+{
+  "candidates": 41,
+  "candidate_km": 1909.22606,
+  "scenarios": 6715,
+  "samples_per_event": 100,
+  "prior": [
+    0.25,
+    0.5,
+    0.25
+  ],
+  "costs_keur_per_km_year": [
+    2.5,
+    4.0,
+    6.3,
+    10.0,
+    16.0
+  ],
+  "loss_unit_keur_per_mw": 240.0,
+  "gap_target": 0.001,
+  "lps": 10176,
+  "seconds": 1655.8727188110352
+}
