@@ -1,0 +1,20 @@
+{
+  "period": "2020-09-01 to 2025-12-31",
+  "forced_outage_documents": 176,
+  "forced_outage_assets": 176,
+  "events": 100,
+  "base_rate_per_ordinary_winter_day": 0.08990318118948824,
+  "share_of_forced_outages_in_storm_windows": 0.125,
+  "share_of_days_in_storm_windows": 0.14425051334702257,
+  "named_storms": {
+    "Ylenia/Zeynep": {
+      "start": "2022-02-16",
+      "forced_docs": 0,
+      "expected_by_chance": 0.36,
+      "p_value": 1.0,
+      "model_rank_ef": 1,
+      "real_rank": 15
+    }
+  },
+  "overlap_top5_model_vs_real": 0
+}

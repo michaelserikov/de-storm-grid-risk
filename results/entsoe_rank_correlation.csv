@@ -1,0 +1,13 @@
+sample,predictor,events,kendall_tau,p_tau,spearman
+all events Sep 2020-2025,loss_index,100,0.1738,0.0330,0.2099
+all events Sep 2020-2025,stations_above_v98,100,0.1559,0.0580,0.1871
+all events Sep 2020-2025,max_gust,100,0.1507,0.0627,0.1891
+all events Sep 2020-2025,ef_2,100,0.1460,0.0708,0.1799
+all events Sep 2020-2025,ef,100,0.1436,0.0755,0.1767
+all events Sep 2020-2025,ef_15,100,0.1412,0.0806,0.1740
+top 30 by loss index,loss_index,30,0.0578,0.6996,0.0504
+top 30 by loss index,stations_above_v98,30,-0.0735,0.6249,-0.0982
+top 30 by loss index,max_gust,30,-0.2285,0.1289,-0.2803
+top 30 by loss index,ef_2,30,-0.0347,0.8169,-0.0500
+top 30 by loss index,ef,30,-0.0347,0.8169,-0.0500
+top 30 by loss index,ef_15,30,-0.0424,0.7772,-0.0609
