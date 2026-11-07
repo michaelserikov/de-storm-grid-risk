@@ -66,6 +66,15 @@ Expected annual cost (reinforcement plus lost load), MEUR per year; costs illust
 - The value of knowing the fragility is 13% to 23% of the expected cost of the stochastic plan and peaks at 1.33 MEUR per year at 10 thousand EUR per km and year. It is larger than in the ranked-plan study because the optimised plans can follow the fragility more closely.
 - 10,176 LPs and 28 minutes on a laptop, most of it for the failure samples; the decomposition itself converges in seconds to minutes per problem (`results/stochastic_*.csv`, `results/stochastic_benders_history.csv`).
 
+### Check against reported transmission outages (ENTSO-E)
+
+Forced outages of German transmission assets from the ENTSO-E Transparency Platform, September 2020 to 2025 (176 forced outages; the platform holds forced outages only from September 2020), matched to the 100 storm events of that period.
+
+- Storm windows hold 12.5% of the forced outages and 14.4% of the days: no excess of outages during storms.
+- Ylenia/Zeynep (February 2022), the costliest event for the grid in the model, has no forced outage in the records (0.36 expected by chance); it ranks 15th by reported outages.
+- Across all 100 events the loss index is weakly related to the number of reported outages (Kendall 0.17, p 0.03); among the 30 strongest events there is no relation for any storm measure, and the top 5 events by model and by records share none.
+- So the open records hold no storm signal on the transmission level that could calibrate the fragility: reported forced outages are rare (about one in eleven ordinary winter days), and most storm damage happens in distribution grids. The fragility stays assumed (`results/entsoe_*.csv`).
+
 Sensitivities of the central case, top 40 events, lost load per winter: load 55 GW 12.5 MW, 70 GW 19.6 MW, 80 GW 25.4 MW; flow limits at 70% of thermal rating 21.6 MW (`results/sensitivity.csv`). Tables by plan and cost are in `results/voi_actions_*.csv` and `results/voi_curve_*.csv`, the critical branches in `results/critical_branches.csv`.
 
 ## Data
@@ -85,12 +94,14 @@ python -m stormgrid.run           # about 15 minutes: results/summary_by_fragili
 python -m stormgrid.value         # about 30 minutes: correlated failures and value of information
 python scripts/storm_stability.py # stability of critical lines across storms; resumes from a cache in data/raw/
 python -m stormgrid.stochastic    # about 30 minutes: reinforcement as a two-stage stochastic MILP (Benders)
+python scripts/entsoe_outages.py  # needs an ENTSO-E API token; outages into data/outages/, not committed
+python scripts/entsoe_validation.py
 pytest                            # offline tests on small grids with answers known by hand
 ```
 
 ## Limitations
 
-- **The fragility is assumed.** Nothing here is calibrated to observed line failures. The three cases span a guess, the shape is one lognormal, and the prior on the cases is a judgement. Checking against open outage records is the next step.
+- **The fragility is assumed.** Nothing here is calibrated to observed line failures. The three cases span a guess, the shape is one lognormal, and the prior on the cases is a judgement. Open ENTSO-E outage records were checked and show no storm signal that could calibrate it.
 - **Transmission only.** Most storm outages happen in distribution grids, which are not modelled, so the lost load is far from total customer outages.
 - **One static hour.** Fixed load, no redispatch costs, no protection, no cascading, no restoration process and wind output at a fixed level, even though turbines may cut out in a storm. Germany as an island removes support from neighbours. Station gusts stand in for a wind field.
 - **Value of information.** Plans are limited to the ranked lists, and the stochastic program to 41 candidate branches; the program uses the same training sample as the rankings and is checked on the test sample. Its recourse is the shed above the intact-grid shed without the floor at zero used elsewhere, so a failure that happens to relieve congestion counts with its small gain. The numbers scale with the assumed 24 hours and 10,000 EUR/MWh. Reinforcement is treated as making a branch immune, and a sample without loss is assumed to stay without loss after reinforcement, ignoring rare cases where an added line worsens flows. Noise in the Monte Carlo estimate biases the minimum over plans, so EVPI near zero should be read as zero.
